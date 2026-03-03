@@ -3,7 +3,7 @@ const XLSX = require("xlsx");
 const Student = require("./models/Student");
 
 // connect database
-mongoose.connect("mongodb+srv://kotharepratik129_db_user:V4XMVxTXa9c4FQX6@cluster0.tzauzme.mongodb.net/school")
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("DB Connected"))
 .catch(err => console.log(err));
 
